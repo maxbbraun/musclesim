@@ -1,2 +1,1 @@
-# musclesim
-Artificial muscle simulator
+Artificial Muscle Simulator 1.2

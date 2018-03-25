@@ -1,0 +1,19 @@
+
+source = "reaching_task_data"
+
+set key right top
+set ytics nomirror
+set y2tics
+set xlabel "time [s]"
+set ylabel "distance [mm]"
+set y2label "activity"
+#set xrange [0:300]
+#set yrange [-250:150]
+set style line 1 lt rgb "red" lw 3
+set style line 3 lt rgb "green" lw 3
+#set title ""
+
+plot source using 1:5 axis x1y1 ls 1 title "distance to target" with lines, \
+     source using 1:6 axis x1y2 ls 3 title "activity" with lines
+
+reset

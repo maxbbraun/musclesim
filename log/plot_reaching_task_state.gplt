@@ -1,0 +1,33 @@
+
+source = "reaching_task_data"
+
+set key left top
+set xlabel "time [s]"
+set ylabel "state"
+set ytics
+#set xrange [0:300]
+#set yrange [0:1]
+set style line 1 lt rgb "gray" lw 3
+set style line 2 lt rgb "pink" lw 3
+set style line 3 lt rgb "brown" lw 3
+set style line 4 lt rgb "red" lw 3
+set style line 5 lt rgb "orange" lw 3
+set style line 6 lt rgb "yellow" lw 3
+set style line 7 lt rgb "green" lw 3
+set style line 8 lt rgb "aquamarine" lw 3
+set style line 9 lt rgb "blue" lw 3
+set style line 10 lt rgb "purple" lw 3
+#set title ""
+
+plot source using 1:7 ls 1 title "0" with lines, \
+     source using 1:8 ls 2 title "1" with lines, \
+     source using 1:9 ls 3 title "2" with lines, \
+     source using 1:10 ls 4 title "3" with lines, \
+     source using 1:11 ls 5 title "4" with lines, \
+     source using 1:12 ls 6 title "5" with lines, \
+     source using 1:13 ls 7 title "6" with lines, \
+     source using 1:14 ls 8 title "7" with lines, \
+     source using 1:15 ls 9 title "8" with lines, \
+     source using 1:16 ls 10 title "9" with lines
+
+reset

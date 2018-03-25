@@ -1,0 +1,16 @@
+
+source = "reaching_task_data"
+
+set key left top
+set xlabel "x [mm]"
+set ylabel "y [mm]"
+set zlabel "z [mm]"
+#set xrange [0:300]
+#set yrange [0:1]
+set style line 1 lt rgb "red" lw 3
+#set title ""
+#-200, -50, 200
+
+splot source using 2:3:4 ls 1 title "hand position" with lines
+
+reset

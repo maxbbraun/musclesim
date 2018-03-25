@@ -1,0 +1,53 @@
+
+  //constructor
+  //  int number_of_actuators  : number of actuators,
+  //                             that is dimention of state of yuragi
+  //  int number_of_attractors : number of attractors
+  AdaptiveAttractorSelection(int number_of_actuators, int number_of_attractors);
+
+  //destructor
+  ~AdaptiveAttractorSelection();
+
+  //update state of attractor selection model,
+  //this method wraps following 2 methods
+  double* nextASMState(double* robotic_state);
+
+  //calculation of activity
+  // (this method is defined in CActivity.cpp)
+  //  double* robotic_state : the 3D position of the hand
+  //  return double         : activity (1 <= a <= 30)
+  double calculateActivity(double* robotic_state);
+
+  //update state of attractor selection model by arvitrary activity
+  // (this method is defined in CYuragi.cpp)
+  //  double activity : arbitrary activity (activity >= 0)
+  //  return double*  : array of state of attractor selection model
+  //                    the range of the state is [-1, 1]
+  double* nextASMState(double activity);
+
+  //this method resets state
+  // (this method is defined in CYuragi.cpp)
+  //  double* ASM_state : arbitrary state
+  //                      if this argument is NULL, random number is set
+  int resetASMState(double* ASM_state=NULL);
+
+  //this method resets state
+  // (this method is defined in CYuragi.cpp)
+  //  double uniform_state : arbitrary state
+  int resetASMState(double uniform_state);
+
+  //this method determines whether attractors are adaptive or not
+  // (this method is defined in CYuragi.cpp)
+  //  bool on : true -> adaptive (default), false -> not adaptive
+  int adaptiveAttractor(bool on);
+
+  //this method sets goal
+  // (this method is defined in CActivity.cpp)
+  //  int dim_of_robotic_state  : dimention of robotic state
+  //  const double* goal        : array of goal of some task
+  int setGoal(int dim_of_robotic_state, const double* goal);
+
+  //this method write activity and distance into "activity.dat",
+  //                  state into "state.dat",
+  //              and attractors into "attractor.dat" respectively
+  int saveData(double time);
