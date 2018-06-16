@@ -1,4 +1,4 @@
-# Artificial Muscle Simulator 1.2
+# Artificial Muscle Simulator
 
 [大阪大学 “ゆらぎ”プロジェクト](http://www.yuragi.osaka-u.ac.jp/) (2007)
 
