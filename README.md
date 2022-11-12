@@ -6,4 +6,4 @@ Understanding and utilizing fluctuation effects is the motivation behind the int
 
 This repository contains the [whitepaper](docs/whitepaper.pdf) and [presentation](docs/presentation.pdf) describing the robotic arm and simulator as well as the [source code](sim/) and [documentation](docs/documentation.pdf) for using it.
 
-[![robot](docs/robot.jpg) ![musclesim](docs/musclesim.gif)](docs/whitepaper.pdf)
+![robot](docs/robot.jpg) ![musclesim](docs/musclesim.gif)
